@@ -1,0 +1,144 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Webeng Tests",
+		"_postman_id": "0257eeb4-0313-9fa8-bcd3-c1690ba32a90",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:3000/api/login workt",
+			"request": {
+				"url": "localhost:3000/api/login",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "dhbwka_user",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "akm8990",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/login workt nicht",
+			"request": {
+				"url": "localhost:3000/api/login",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "dhbwka_user2",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "akm8990",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/login workt nicht 2",
+			"request": {
+				"url": "localhost:3000/api/login",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "dhbwka_user",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "akm89902",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/ workt",
+			"request": {
+				"url": "localhost:3000/api/",
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRoYndrYV91c2VyIiwicGFzc3dvcmQiOiJha204OTkwIiwiaWF0IjoxNDk2OTIwOTIxLCJleHAiOjE0OTcwMDczMjF9.yRWAyPxmHRikn0-LQf3NW9YnY1x4Cn_F58anFL7Ktxs",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/ workt nicht",
+			"request": {
+				"url": "localhost:3000/api/",
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NCJ9.eyJ1c2VybmFtZSI6ImRoYndrYV91c2VyIiwicGFzc3dvcmQiOiJha204OTkwIiwiaWF0IjoxNDk2OTIwMTQ0LCJleHAiOjE0OTcwMDY1NDR9.f0XrRcwjEQXBIx7J5AIb83G6vAIs8Q4gyJEg6qCQilI",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
