@@ -12,8 +12,19 @@ var istokenvalid = false;
 console.log(app.path());
 console.log(userconfig);
 console.log(userconfig.username);
+var items = blog;
+// only include items with hidden == true
+items = items.filter(function(item){
+  return (item.hidden == true);
+});
 
+ var keys = Object.keys( items );
+ for( var i = 0,length = keys.length; i < length; i++ ) {
+     console.log(items[ keys[ i ] ].index);
+ }
+//console.log(items);
 
+//console.log("blog: "+blog[0].hidden)
 
 var port = process.env.PORT || 3000; // used to create, sign, and verify tokens
 app.set('superSecret', 'sicherespasswort');
