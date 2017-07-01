@@ -35,26 +35,26 @@
  2. Blog
     * `/blog/` (GET) alias Alle Blogbeiträge anzeigen
         
-      **Parameter:** `jwt` (im Header), `oldpassword`, `newpassword`
+      **Parameter:** `jwt` (im Header, optional)
       
-      **Antwort:** JSON Keys: `token`
+      **Antwort:** JSON: Mit allen Blogeinträgen (ohne jwt keine hidden)
     * `/blog/:id` (GET) alias Einen Blogbeitrag anzeigen
         
-      **Parameter:** `jwt` (im Header), `oldpassword`, `newpassword`
+      **Parameter:** `jwt` (im Header, optional)
       
-      **Antwort:** JSON Keys: `token`
+      **Antwort:** JSON: Blogeintrag (jwt erlaubt Zugriff auf alle, ohne nur hidden == false)
     * `/blog/:id` (DELETE) alias Einen Blogbeitrag löschen
         
-      **Parameter:** `jwt` (im Header), `oldpassword`, `newpassword`
+      **Parameter:** `jwt` (im Header, optional)
       
-      **Antwort:** JSON Keys: `token`
+      **Antwort:** JSON: message, HTTP Code 200 bzw. 401
     * `/blog/:id` (PUT) alias Einen Blogeintrag bearbeiten
         
-      **Parameter:** `jwt` (im Header), `oldpassword`, `newpassword`
+      **Parameter:** `jwt` (im Header, optional), `gewünschte Parameter` (alle anderen bleiben unverändert)
       
-      **Antwort:** JSON Keys: `token`
+      **Antwort:** JSON Object des Eintrag, HTTP Code 200 bzw. 401
     * `/blog/` (POST) alias Einen Blogbeitrag erstellen
         
-      **Parameter:** `jwt` (im Header), `oldpassword`, `newpassword`
+      **Parameter:** `jwt` (im Header), `alle Parameter` (ohne \_id und index)
       
-      **Antwort:** JSON Keys: `token`
+      **Antwort:** JSON ´id´ des Eintrags
