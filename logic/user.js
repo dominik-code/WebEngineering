@@ -34,6 +34,7 @@ exports.login = function(req, res) {
 exports.passwordRecovery = function(req, res, istokenvalid) {
     if(istokenvalid) {
         if(userconfig.password == req.body.oldpassword) {
+            var user = userconfig;
             // Wert im Objekt ändern
             userconfig.password = req.body.newpassword;
             // Objekt zurück in Datei schreiben
