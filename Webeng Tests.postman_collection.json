@@ -431,7 +431,7 @@
 		{
 			"name": "localhost:3000/api/blog/id workt delete",
 			"request": {
-				"url": "localhost:3000/api/V1/blog/1",
+				"url": "localhost:3000/api/V1/blog/17",
 				"method": "DELETE",
 				"header": [
 					{
