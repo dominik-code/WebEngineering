@@ -1,21 +1,36 @@
+//  _   _         _    _           _       _              _        _ 
+// ( ) ( )       (_ ) (_ )        ( )  _  ( )            (_ )     ( )
+// | |_| |   __   | |  | |    _   | | ( ) | |   _    _ __ | |    _| |
+// |  _  | /'__`\ | |  | |  /'_`\ | | | | | | /'_`\ ( '__)| |  /'_` |
+// | | | |(  ___/ | |  | | ( (_) )| (_/ \_) |( (_) )| |   | | ( (_| |
+// (_) (_)`\____)(___)(___)`\___/'`\___x___/'`\___/'(_)  (___)`\__,_)
+
+// Team: Alexander Bierenstiel, Dominik Schmitt, Timo Rautenberg
+
+// Abhängigkeiten einbinden
 var express = require("express");
 var jwt = require('jsonwebtoken');
 var bodyParser = require('body-parser');
+
 // Externe Funktionen der Routen
 var blogfunctions = require('./logic/blog.js');
 var userfunctions = require('./logic/user.js');
+
 // Webservice erstellen
 var app = express();
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
+
 var port = process.env.PORT || 3000;
 app.listen(port);
 console.log("API is at localhost:3000/api/V1/");
+
 // Variable zum Login prüfen, ob der jwt gültig war
 var istokenvalid = false;
 
 // Router als Middleware zur API Schnittstelle
 var apiRoutes = express.Router();
+
 // Alle Bestandteile des Bodys parsen
 apiRoutes.use(bodyParser.urlencoded({extended: true}));
 apiRoutes.use(bodyParser.json());
