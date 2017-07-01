@@ -41,7 +41,10 @@ exports.passwordRecovery = function(req, res, istokenvalid) {
                 if (err) {
                     res.status(401).json({error: err});
                 } else {   
-                    res.status(200).json({ message: 'password changed'});
+                    var token = jwt.sign(user, 'sicherespasswort', {
+                        expiresIn: 31536000 // expires in 1 year
+                    });
+                    res.status(200).json({ token: token});
                     delete require.cache["./user.json"];
                 }
             });
