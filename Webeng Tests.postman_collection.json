@@ -2,7 +2,7 @@
 	"variables": [],
 	"info": {
 		"name": "Webeng Tests",
-		"_postman_id": "0257eeb4-0313-9fa8-bcd3-c1690ba32a90",
+		"_postman_id": "e059aca3-251f-302f-d60d-2f1da0c9b990",
 		"description": "",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
@@ -10,7 +10,7 @@
 		{
 			"name": "localhost:3000/api/login workt",
 			"request": {
-				"url": "localhost:3000/api/login",
+				"url": "localhost:3000/api/V1/login",
 				"method": "PUT",
 				"header": [
 					{
@@ -43,7 +43,7 @@
 		{
 			"name": "localhost:3000/api/login workt nicht",
 			"request": {
-				"url": "localhost:3000/api/login",
+				"url": "localhost:3000/api/V1/login",
 				"method": "PUT",
 				"header": [
 					{
@@ -76,7 +76,7 @@
 		{
 			"name": "localhost:3000/api/login workt nicht 2",
 			"request": {
-				"url": "localhost:3000/api/login",
+				"url": "localhost:3000/api/V1/login",
 				"method": "PUT",
 				"header": [
 					{
@@ -109,12 +109,12 @@
 		{
 			"name": "localhost:3000/api/ workt",
 			"request": {
-				"url": "localhost:3000/api/",
+				"url": "localhost:3000/api/V1/",
 				"method": "GET",
 				"header": [
 					{
 						"key": "x-access-token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRoYndrYV91c2VyIiwicGFzc3dvcmQiOiJha204OTkwIiwiaWF0IjoxNDk2OTIwOTIxLCJleHAiOjE0OTcwMDczMjF9.yRWAyPxmHRikn0-LQf3NW9YnY1x4Cn_F58anFL7Ktxs",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRoYndrYV91c2VyIiwicGFzc3dvcmQiOiJha204OTkwIiwiaWF0IjoxNDk3NDI5NDQ2LCJleHAiOjE1Mjg5NjU0NDZ9.-cgeQidBZiCW6oAB3xgx_OrlIGW_pwSDeE-OhwyLlkY",
 						"description": ""
 					}
 				],
@@ -126,7 +126,7 @@
 		{
 			"name": "localhost:3000/api/ workt nicht",
 			"request": {
-				"url": "localhost:3000/api/",
+				"url": "localhost:3000/api/V1/",
 				"method": "GET",
 				"header": [
 					{
@@ -136,6 +136,362 @@
 					}
 				],
 				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/passwordRecovery workt",
+			"request": {
+				"url": {
+					"raw": "localhost:3000/api/V1/passwordRecovery?oldpassword=akm8990&newpassword=hallowelt",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"V1",
+						"passwordRecovery"
+					],
+					"query": [
+						{
+							"key": "oldpassword",
+							"value": "akm8990",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "newpassword",
+							"value": "hallowelt",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRoYndrYV91c2VyIiwicGFzc3dvcmQiOiJha204OTkwIiwiaWF0IjoxNDk3NDI5NDQ2LCJleHAiOjE1Mjg5NjU0NDZ9.-cgeQidBZiCW6oAB3xgx_OrlIGW_pwSDeE-OhwyLlkY",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "oldpassword",
+							"value": "hallowelt",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "newpassword",
+							"value": "akm8990",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/blog workt auth",
+			"request": {
+				"url": "localhost:3000/api/V1/blog",
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRoYndrYV91c2VyIiwicGFzc3dvcmQiOiJha204OTkwIiwiaWF0IjoxNDk3NDI5NDQ2LCJleHAiOjE1Mjg5NjU0NDZ9.-cgeQidBZiCW6oAB3xgx_OrlIGW_pwSDeE-OhwyLlkY",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/blog workt noauth",
+			"request": {
+				"url": "localhost:3000/api/V1/blog",
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRoYndrYV91c2VyIiwicGFzc3dvcmQiOiJha204OTkwIiwiaWF0IjoxNDk3NDI5NDQ2LCJleHAiOjE1Mjg5NjU0NDZ9.-cgeQidBZiCW6oAB3xgx_OrlIGW_pwSDeE-OhwyLlkY",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/blog/id workt auth",
+			"request": {
+				"url": "localhost:3000/api/V1/blog/0",
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRoYndrYV91c2VyIiwicGFzc3dvcmQiOiJha204OTkwIiwiaWF0IjoxNDk3NDI5NDQ2LCJleHAiOjE1Mjg5NjU0NDZ9.-cgeQidBZiCW6oAB3xgx_OrlIGW_pwSDeE-OhwyLlkY",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/blog/id workt noauth",
+			"request": {
+				"url": "localhost:3000/api/V1/blog/6",
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRoYndrYV91c2VyIiwicGFzc3dvcmQiOiJha204OTkwIiwiaWF0IjoxNDk3NDI5NDQ2LCJleHAiOjE1Mjg5NjU0NDZ9.-cgeQidBZiCW6oAB3xgx_OrlIGW_pwSDeE-OhwyLlkY",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/blog/id workt noauth hidden",
+			"request": {
+				"url": "localhost:3000/api/V1/blog/0",
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRoYndrYV91c2VyIiwicGFzc3dvcmQiOiJha204OTkwIiwiaWF0IjoxNDk3NDI5NDQ2LCJleHAiOjE1Mjg5NjU0NDZ9.-cgeQidBZiCW6oAB3xgx_OrlIGW_pwSDeE-OhwyLlkY",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/blog/id workt create",
+			"request": {
+				"url": "localhost:3000/api/V1/blog",
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRoYndrYV91c2VyIiwicGFzc3dvcmQiOiJha204OTkwIiwiaWF0IjoxNDk3NDI5NDQ2LCJleHAiOjE1Mjg5NjU0NDZ9.-cgeQidBZiCW6oAB3xgx_OrlIGW_pwSDeE-OhwyLlkY",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "Hallowelt",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "picture",
+							"value": "https://welt.com/pic.jpg",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "author",
+							"value": "Max Musterman",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "about",
+							"value": "Nothing",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "released",
+							"value": "2016-01-04T02:19:12 -01:06",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "hidden",
+							"value": "false",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "tags",
+							"value": "[\"baum\",\"haus\",\"welt\"]",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/blog/id workt edit",
+			"request": {
+				"url": "localhost:3000/api/V1/blog/1",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRoYndrYV91c2VyIiwicGFzc3dvcmQiOiJha204OTkwIiwiaWF0IjoxNDk3NDI5NDQ2LCJleHAiOjE1Mjg5NjU0NDZ9.-cgeQidBZiCW6oAB3xgx_OrlIGW_pwSDeE-OhwyLlkY",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "Hallowelt",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "picture",
+							"value": "https://welt.com/pic.jpg",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "author",
+							"value": "Max Musterman",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "about",
+							"value": "Nothing",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "released",
+							"value": "2016-01-04T02:19:12 -01:06",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "hidden",
+							"value": "false",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "tags",
+							"value": "[\"baum\",\"haus\",\"welt\"]",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/blog/id workt delete",
+			"request": {
+				"url": "localhost:3000/api/V1/blog/1",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRoYndrYV91c2VyIiwicGFzc3dvcmQiOiJha204OTkwIiwiaWF0IjoxNDk3NDI5NDQ2LCJleHAiOjE1Mjg5NjU0NDZ9.-cgeQidBZiCW6oAB3xgx_OrlIGW_pwSDeE-OhwyLlkY",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "Hallowelt",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "picture",
+							"value": "https://welt.com/pic.jpg",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "author",
+							"value": "Max Musterman",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "about",
+							"value": "Nothing",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "released",
+							"value": "2016-01-04T02:19:12 -01:06",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "hidden",
+							"value": "false",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "tags",
+							"value": "[\"baum\",\"haus\",\"welt\"]",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
 				"description": ""
 			},
 			"response": []
